@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Playland</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Press Start 2P', cursive;
+            line-height: 1.6;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        .header {
+            background-color: #8b4513;
+            color: #ffd700;
+            padding: 15px 20px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 24px;
+            text-shadow: 2px 2px #000;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .about {
+            background-color: #fff;
+            border: 4px solid #8b4513;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+        }
+        .about img {
+            width: 30%;
+            max-width: 200px;
+            height: auto;
+            margin-right: 20px;
+            border: 2px solid #8b4513;
+            border-radius: 5px;
+        }
+        .about-text {
+            flex: 1;
+        }
+        .section-title {
+            color: #8b4513;
+            border-bottom: 2px dashed #8b4513;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .product {
+            background-color: #fff;
+            border: 4px solid #8b4513;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+            image-rendering: pixelated;
+        }
+        .btn {
+            display: inline-block;
+            background: #ffd700;
+            color: #8b4513;
+            padding: 10px 15px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background: #ffec8b;
+        }
+
+        @media (max-width: 768px) {
+            .about {
+                flex-direction: column;
+            }
+            .about img {
+                width: 50%;
+                max-width: 150px;
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .products {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Pixel Playland</h1>
+    </header>
+
+    <div class="container">
+        <section class="about">
+            <img src="images\loja.jpg" alt="Interior da Pixel Playland">
+            <div class="about-text">
+                <h2 class="section-title">Sobre a Pixel Playland</h2>
+                <p>Oi, gamer! Bem-vindo à Pixel Playland, o cantinho mais divertido da internet para comprar joguinhos e coisinhas legais pro seu PC. A gente adora games tanto quanto você e queremos que você se divirta muito com a gente! :D</p>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Nossas Ofertas Incríveis!</h2>
+            <div class="products">
+                <div class="product">
+                    <img src="images\mine.avif" alt="Minecraft">
+                    <h3>Minecraft</h3>
+                    <p>Construa, explore e sobreviva neste mundo de blocos super divertido!</p>
+                    <button class="btn">Comprar!</button>
+                </div>
+                <div class="product">
+                    <img src="images\sv.jfif" alt="Stardew Valley">
+                    <h3>Stardew Valley</h3>
+                    <p>Cuide da fazenda do seu vovô neste RPG relaxante e cheio de pixelzinhos!</p>
+                    <button class="btn">Comprar!</button>
+                </div>
+                <div class="product">
+                    <img src="images\m.jfif" alt="Mouse Gamer RGB">
+                    <h3>Mouse Gamer RGB</h3>
+                    <p>Mouse brilhante e colorido pra deixar seu setup super maneiro!</p>
+                    <button class="btn">Comprar!</button>
+                </div>
+                <div class="product">
+                    <img src="images\hed.jpg" alt="Headset Gamer">
+                    <h3>Headset Gamer</h3>
+                    <p>Escute os inimigos chegando e converse com seus amigos nesse fone super confortável!</p>
+                    <button class="btn">Comprar!</button>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
